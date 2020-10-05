@@ -1,0 +1,29 @@
+{
+  "name": "motivate_up_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./src",
+    "build-windows": "electron-packager ./src FirstApp --platform=win32 --arch=x64 --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ragi-lts/MotivateApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ragi-lts/MotivateApp/issues"
+  },
+  "homepage": "https://github.com/Ragi-lts/MotivateApp#readme",
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-packager": "^15.1.0"
+  }
+}
