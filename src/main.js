@@ -1,19 +1,11 @@
-const electron = require('electron')
+const moment = require('moment');
+moment.locale("ja");
 
-const { app, BrowserWindow } = require('electron')
-
-function createWindow() {
-    const win = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences:
-        {
-            nodeIntegration: true
-        }
-    })
-
-    win.loadFile('./index.html')
-    /* win.webContents.openDevTools() */
+window.onload = function () {
+    setInterval(getTime, 1000, 'nowTime', 'MM/DD HH:mm:ss');
 }
 
-app.whenReady().then(createWindow)
+function getTime(id, format) {
+    var now = moment().format(format);
+    document.getElementById(id).textContent = now;
+}
