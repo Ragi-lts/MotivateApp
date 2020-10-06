@@ -5,18 +5,65 @@
     <meta charset="UTF-8">
     <title>Hello, World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Hello,World!</h1>
-    We are using node
-    <script>document.write(process.versions.node)</script>,
-    Chrome
-    <script>document.write(process.versions.chrome)</script>,
-    and Electron
-    <script>document.write(process.versions.electron)</script>.
+
+    <nav class="nav-extended blue">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">やる気を出すApp</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#test1">現在のポイント</a></li>
+                <li class="tab"><a href="#">開発情報</a></li>
+                <li id="nowTime" class="tab"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+<!--         <div class="right-align">
+            <a onclick="M.toast({html: '時刻を取得しました．'})" class="btn">Get Time</a>
+        </div> -->
+        <div id="pointIndicate" class="section">
+            <h5>現在のポイント</h5>
+            <h5 class="right">XX pt.</h5>
+            <div class="divider"></div>
+        </div>
+
+
+
+    </div>
+
+
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+
+
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+
+
+
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+
+    });
+</script>
+<script src="./main.js"></script>
 
 </html>
