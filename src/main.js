@@ -2,7 +2,7 @@ const moment = require('moment');
 moment.locale("ja");
 
 window.onload = function () {
-    setInterval(getTime, 1000, 'nowTime', 'MM/DD HH:mm:ss');
+    setInterval(getTime, 1000, 'nowTime', 'MM/DD(dd) HH:mm:ss');
 }
 
 function getTime(id, format) {

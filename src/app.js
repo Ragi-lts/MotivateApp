@@ -9,9 +9,9 @@ function createWindow() {
         webPreferences:
         {
             nodeIntegration: true
-        }
+        },
     })
-
+    win.setMenu(null)
     win.loadFile('./index.html')
     /* win.webContents.openDevTools() */
 }
