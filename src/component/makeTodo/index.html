@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../../node_modules/materialize-css/dist/css/materialize.css">
+    <script src="../../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <div id="MakeTodo" class="row">
+        <form>
+            <div class="section">
+                ToDoを作成しましょう．すぐにできるものでも書いておきましょう．
+                <div class="input-field">
+                    <textarea id="MakeTodo_area" class="materialize-textarea"></textarea>
+                    <label for="MakeTodo_area"></label>
+                </div>
+        </form>
+    </div>
+    </div>
+</body>
+<script>
+    document.getElementById('MakeTodo_area').characterCounter();
+</script>
+
+</html>
