@@ -17,66 +17,97 @@
         <div class="nav-wrapper">
             <a class="brand-logo">やる気を出すApp</a>
         </div>
-        <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="active" href="#test1">メインメニュー</a></li>
-                <li class="tab"><a href="#test2">開発情報</a></li>
-
-            </ul>
-        </div>
     </nav>
 
     <div class="container">
-        <!--         <div class="right-align">
-            <a onclick="M.toast({html: '時刻を取得しました．'})" class="btn">Get Time</a>
-        </div> -->
-        <div id="pointIndicate" class="section">
-            <h5>現在のポイント</h5>
-            <div class="divider"></div>
-            <h5 class="right">XX pt.</h5>
-
-        </div>
-
-
-
+        <iframe frameborder="0" id="content"></iframe>
     </div>
 
 
     <ul id="slide-out" class="sidenav sidenav-fixed">
-        <li><a class="waves-effect" href="#!">ようこそ，GUESTさん</a></li>
+        <li>
+            <iframe height="200px" style="display: none;" frameborder="0">
+            </iframe>
+            <a class="waves-effect" href="#!">ようこそ，GUESTさん</a>
+        </li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">ユーザ設定</a></li>
-        <li><a class="waves-effect" href="#!"><i class="material-icons">person</i>アカウント認証</a></li>
-        <li>
-            <div class="divider"></div>
+        <li><a class="subheader">メニュー</a></li>
+        <li><a class="waves-effect sidenav-close" href="#!" onclick="Click_Dev('./component/main.html')"><i class="
+                material-icons">home</i>
+                メインメニュー</a></li>
+
+        <div class="divider"></div>
         </li>
-        <li><a class="subheader">目標</a></li>
-        <li><a class="waves-effect" href="#!"><i class="material-icons">
+        <li><a class="subheader">目標を決める</a></li>
+        <li onclick="Click_Dev('./component/makeTodo/index.html')"><a class="waves-effect sidenav-close" href="#!"><i
+                    class="material-icons">
                     format_list_bulleted
                 </i>ToDoリストの作成</a></li>
-        <li><a class="waves-effect" href="#!"><i class="material-icons">
+        <li><a class="waves-effect sidenav-close" href="#!"><i class="material-icons">
                     flag</i>
                 最終目標を設定</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">現在時刻</a></li>
-        <li><a id="nowTime" class="center"></a></li>
+
+        <li><a class="subheader">ユーザ設定</a></li>
+        <li><a class="waves-effect sidenav-close" href="#!"><i class="material-icons">person</i>アカウント認証</a></li>
+        <li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader">
+                その他
+            </a>
+        </li>
+
+        <li onclick="Click_Dev('./component/utility/help.html')"><a class="waves-effect sidenav-close" href="#!"><i
+                    class="material-icons">
+                    help
+                </i>使い方</a></li>
+        <li onclick="Click_Dev('./component/utility/develop.html')"><a class="waves-effect sidenav-close" href="#!"><i
+                    class="material-icons">
+                    build
+                </i>各種設定</a></li>
+        <li>
+
+        <li>
+            <div class="divider"></div>
+        </li>
+
+        <li onclick="Click_Dev('./component/develop/index.html')"> <a class="waves-effect sidenav-close" href="#!"><i
+                    class="material-icons">
+                    rss_feed
+                </i>開発者ブログ</a></li>
+        <li>
+            <a class="subheader">
+                <div class="row">
+                    <div class="col s6" name="title">
+                        Version
+                    </div>
+                    <div class="col s6 right-align" name="value" id="Version"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="subheader">
+                <div class="row">
+                    <div class="col s5" name="title">
+                        現在時刻
+                    </div>
+                    <div class="col s7 right-align" name="value" id="nowTime"></div>
+                </div>
+            </a>
+        </li>
     </ul>
 
 
 
 
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, {});
-
-    });
-</script>
-<script src="./main.js"></script>
+<script src="./index.js"></script>
 
 </html>

@@ -1,13 +1,14 @@
 {
   "name": "motivate_up_app",
   "version": "1.0.0",
+  "AppName":"モチベ維持のためのApp",
   "description": "",
   "directories": {
     "doc": "doc"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ./src",
+    "start": "electron ./app.js",
     "build-windows": "electron-packager ./src FirstApp --platform=win32 --arch=x64 --overwrite"
   },
   "repository": {
@@ -26,6 +27,8 @@
     "electron-packager": "^15.1.0"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.29.1",
